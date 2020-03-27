@@ -1,0 +1,15 @@
+//object literal
+
+const salon = {
+    name:"The Fashion Pet",
+    phone:"3255-78493",
+    address:{
+        street:"Av. Insurgentes",
+        number:"456"
+    },
+    workingHours:{
+        days:"Mon-Fri",
+        open:"9:00",
+        close:"5:00 pm"
+    }
+}
