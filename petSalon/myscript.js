@@ -11,5 +11,8 @@ const salon = {
         days:"Mon-Fri",
         open:"9:00",
         close:"5:00 pm"
-    }
+    },
+    pets:[]
 }
+
+console.log(salon);
