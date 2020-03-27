@@ -16,3 +16,5 @@ const salon = {
 }
 
 console.log(salon);
+
+let {name,phone,address:{street,number},workingHours:{days,open,close}} = salon;
