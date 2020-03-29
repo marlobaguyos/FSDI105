@@ -18,3 +18,19 @@ const salon = {
 console.log(salon);
 
 let {name,phone,address:{street,number},workingHours:{days,open,close}} = salon;
+
+//object constructor
+
+class Pet{
+    constructor(name,age,gender,breed,service,ownerName,ownerContact){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.breed = breed;
+        this.service = service;
+        this.ownerName = ownerName;
+        this.ownerContact = ownerContact;
+    }
+}
+
+const pet1 = new Pet("Shaggy",2,"male","boxer","Shower","Samantha","4857348");
