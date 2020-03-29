@@ -31,6 +31,13 @@ class Pet{
         this.ownerName = ownerName;
         this.ownerContact = ownerContact;
     }
+    ownerInfo = function(){
+        console.log("Owner Name: " + this.ownerName + "\n" + "Contact Phone: " + this.ownerContact);
+    }
 }
 
 const pet1 = new Pet("Shaggy",2,"male","boxer","Shower","Samantha","4857348");
+const pet2 = new Pet("Janis", 3, "Female", "Boxer", "Haircut", "Sabrina", "78657459");
+
+pet1.ownerInfo();
+pet2.ownerInfo();
