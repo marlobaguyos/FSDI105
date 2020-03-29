@@ -9,7 +9,7 @@ const salon = {
     },
     workingHours:{
         days:"Mon-Fri",
-        open:"9:00",
+        open:"9:00 am",
         close:"5:00 pm"
     },
     pets:[]
