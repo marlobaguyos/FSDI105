@@ -88,6 +88,7 @@ function register(){
     const thePet = new Pet(textname.value, textage.value, textgender.value, textbreed.value, textservice.value, textowner.value, textcontact);
     salon.pets.push(thePet);
     alert("you registered a new pet.");
+    clear();
 }
 
 function clear(){
