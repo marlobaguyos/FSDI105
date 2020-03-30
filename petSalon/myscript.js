@@ -89,6 +89,7 @@ function register(){
     salon.pets.push(thePet);
     alert("you registered a new pet.");
     clear();
+    display(thePet);
 }
 
 function clear(){
@@ -100,3 +101,17 @@ function clear(){
     textservice.value="";
     textcontact.value="";
 }
+
+function display(aPet){
+    var tbody=document.getElementById('rowPet');
+
+    var row = `<tr>
+                    <td> ${aPet.name}</td>
+                    <td> ${aPet.age}</td>
+                </tr>`;
+    tbody.innerHTML+=row;
+}
+
+display(pet1);
+display(pet2);
+display(pet3);
