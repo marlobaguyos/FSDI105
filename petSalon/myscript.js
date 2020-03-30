@@ -15,7 +15,7 @@ const salon = {
     pets:[]
 }
 
-console.log(salon);
+//console.log(salon);
 
 let {name,phone,address:{street,number},workingHours:{days,open,close}} = salon;
 
@@ -43,14 +43,35 @@ class Pet{
         this.happiness+=5;
         console.log("Feeding ...");
     }
-
-
+    status = function() {
+        console.log("Hunger: " + this.hunger + "\n" + "Happiness: " + this.happiness);
+    }
 }
 
 const pet1 = new Pet("Shaggy",2,"male","boxer","Shower","Samantha","4857348");
 const pet2 = new Pet("Janis", 3, "Female", "Boxer", "Haircut", "Sabrina", "78657459");
+const pet3 = new Pet("Ozzy", 6, "Male", "Mixed", "Shower", "Omar", "5876844");
 
 pet1.ownerInfo();
 pet2.ownerInfo();
+pet2.ownerInfo();
 
+console.log(pet1);
+console.log(pet2);
+console.log(pet3);
+
+pet1.status();
 pet1.feed();
+pet1.status();
+
+salon.pets.push(pet1);
+salon.pets.push(pet2);
+salon.pets.push(pet3);
+
+var textname=document.getElementById('txtName');
+var textage=document.getElementById('txtAge');
+
+function register(){
+    console.log(textname.value);
+    console.log(textage.value);
+}
