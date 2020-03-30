@@ -72,9 +72,20 @@ var textname=document.getElementById('txtName');
 var textage=document.getElementById('txtAge');
 var textgender=document.getElementById('txtgender');
 var textbreed = document.getElementById('txtbreed');
-var textservice = document.getElementById(textservice);
+var textservice = document.getElementById('txtservice');
+var  textowner = document.getElementById('txtOname');
+var textcontact = document.getElementById('txtcontract')
 
 function register(){
-    console.log(textname.value);
-    console.log(textage.value);
+    // console.log(textname.value);
+    // console.log(textage.value);
+    // console.log(textgender.value);
+    // console.log(textbreed.value);
+    // console.log(textservice.value);
+    // console.log(textowner.value);
+    // console.log(textcontact);
+
+    const thePet = new Pet(textname.value, textage.value, textgender.value, textbreed.value, textservice.value, textowner.value, textcontact);
+    salon.pets.push(thePet);
+    alert("you registered a new pet.");
 }
