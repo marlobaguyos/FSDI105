@@ -89,3 +89,13 @@ function register(){
     salon.pets.push(thePet);
     alert("you registered a new pet.");
 }
+
+function clear(){
+    textname.value="";
+    textage.value="";
+    textgender.value="";
+    textbreed.value="";
+    textowner.value="";
+    textservice.value="";
+    textcontact.value="";
+}
