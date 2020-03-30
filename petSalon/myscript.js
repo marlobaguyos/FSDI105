@@ -70,6 +70,9 @@ salon.pets.push(pet3);
 
 var textname=document.getElementById('txtName');
 var textage=document.getElementById('txtAge');
+var textgender=document.getElementById('txtgender');
+var textbreed = document.getElementById('txtbreed');
+var textservice = document.getElementById(textservice);
 
 function register(){
     console.log(textname.value);
