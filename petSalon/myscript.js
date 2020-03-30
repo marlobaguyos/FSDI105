@@ -74,7 +74,7 @@ var textgender=document.getElementById('txtgender');
 var textbreed = document.getElementById('txtbreed');
 var textservice = document.getElementById('txtservice');
 var  textowner = document.getElementById('txtOname');
-var textcontact = document.getElementById('txtcontract')
+var textcontact = document.getElementById('txtcontact')
 
 function register(){
     // console.log(textname.value);
@@ -83,9 +83,9 @@ function register(){
     // console.log(textbreed.value);
     // console.log(textservice.value);
     // console.log(textowner.value);
-    // console.log(textcontact);
+    // console.log(textcontact.value);
 
-    const thePet = new Pet(textname.value, textage.value, textgender.value, textbreed.value, textservice.value, textowner.value, textcontact);
+    const thePet = new Pet(textname.value, textage.value, textgender.value, textbreed.value, textservice.value, textowner.value, textcontact.value);
     salon.pets.push(thePet);
     alert("you registered a new pet.");
     clear();
