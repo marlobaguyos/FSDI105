@@ -30,10 +30,21 @@ class Pet{
         this.service = service;
         this.ownerName = ownerName;
         this.ownerContact = ownerContact;
+        this.hunger = 10;
+        this.happiness = 5;
     }
+
     ownerInfo = function(){
         console.log("Owner Name: " + this.ownerName + "\n" + "Contact Phone: " + this.ownerContact);
     }
+
+    feed = function() {
+        this.hunger-=5;
+        this.happiness+=5;
+        console.log("Feeding ...");
+    }
+
+
 }
 
 const pet1 = new Pet("Shaggy",2,"male","boxer","Shower","Samantha","4857348");
@@ -41,3 +52,5 @@ const pet2 = new Pet("Janis", 3, "Female", "Boxer", "Haircut", "Sabrina", "78657
 
 pet1.ownerInfo();
 pet2.ownerInfo();
+
+pet1.feed();
