@@ -1,6 +1,6 @@
 var logo = document.getElementById('logo');
 var links = document.getElementsByTagName('a');
-var btns = document.getElementsByClassName('boton');
+var btns = document.getElementById('main-1').getElementsByTagName('a');
 
 var a = document.getElementById('navegacion').getElementsByTagName('a');
 a[0].setAttribute('href', 'http://www.google.com');
