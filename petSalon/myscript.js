@@ -20,7 +20,7 @@ const salon = {
 let {name,phone,address:{street,number},workingHours:{days,open,close}} = salon;
 
 //object constructor
-
+var c = 0;
 class Pet{
     constructor(name,age,gender,breed,service,ownerName,ownerContact){
         this.name = name;
@@ -32,6 +32,7 @@ class Pet{
         this.ownerContact = ownerContact;
         this.hunger = 10;
         this.happiness = 5;
+        this.id='pet' + c;
     }
 
     ownerInfo = function(){
