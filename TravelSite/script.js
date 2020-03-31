@@ -10,9 +10,9 @@ console.log(a);
 // a[0].setAttribute('href', 'http://www.google.com');
 
 
-// for(let i=0;i<links.length;i++){
-//     links[i].setAttribute('target', '_blank');
-// }
+for(let i=0;i<links.length;i++){
+    links[i].setAttribute('target', '_blank');
+}
 
 // for(let j=0;j<btns.length;j++){
 //     btns[j].setAttribute('class', 'x');
