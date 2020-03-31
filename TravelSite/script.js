@@ -21,9 +21,12 @@ var lis = document.querySelectorAll('#navegacion nav ul li');
 console.log(li);
 console.log(lis);
 
-var newElement = document.createElement('a');
+var newElement = document.createElement('ul');
+var newLi = document.createElement("li");
 var newText = document.createTextNode("Google");
+var main = document.getElementById('main-1')
+newLi.appendChild(newText);
+newElement.appendChild(newLi);
 
-newElement.appendChild(newText);
 
 console.log(newElement);
