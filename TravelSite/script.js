@@ -31,3 +31,5 @@ newElement.appendChild(newLi);
 
 
 console.log(newElement);
+
+logo.remove();
