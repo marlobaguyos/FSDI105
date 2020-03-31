@@ -21,15 +21,19 @@ var lis = document.querySelectorAll('#navegacion nav ul li');
 console.log(li);
 console.log(lis);
 
-var newElement = document.createElement('ul');
-var newLi = document.createElement("li");
+var newElement = document.createElement('a');
+//var newLi = document.createElement("li");
 var newText = document.createTextNode("Google");
 var main = document.getElementById('main-1')
 
-newLi.appendChild(newText);
-newElement.appendChild(newLi);
+//newLi.appendChild(newText);
+newElement.appendChild(newText);
 
+console.log(main)
 
-console.log(newElement);
+//main.appendChild(newElement);
 
 logo.remove();
+
+var parent = document.querySelector('#navegacion nav ul');
+parent.replaceChild(newElement, li);
