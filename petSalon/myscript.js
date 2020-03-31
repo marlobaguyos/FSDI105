@@ -33,6 +33,7 @@ class Pet{
         this.hunger = 10;
         this.happiness = 5;
         this.id='pet' + c;
+        c+=1;
     }
 
     ownerInfo = function(){
@@ -106,9 +107,15 @@ function clear(){
 function display(aPet){
     var tbody=document.getElementById('rowPet');
 
-    var row = `<tr>
+    var row = `<tr id='${aPet.id}'>
                     <td> ${aPet.name}</td>
                     <td> ${aPet.age}</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td><button>Delete</button></td>
                 </tr>`;
     tbody.innerHTML+=row;
 }
