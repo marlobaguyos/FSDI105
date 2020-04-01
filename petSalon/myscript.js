@@ -115,7 +115,7 @@ function display(aPet){
                     <td> </td>
                     <td> </td>
                     <td> </td>
-                    <td><button>Delete</button></td>
+                    <td><button onclick='deletePet("${aPet.id}")'>Delete</button></td>
                 </tr>`;
     tbody.innerHTML+=row;
 }
@@ -123,3 +123,18 @@ function display(aPet){
 display(pet1);
 display(pet2);
 display(pet3);
+
+function deletePet(petId) {
+    var tr = document.getElementById(petId);
+    var indexDelete;
+
+    //search the pet using the id
+
+    for(var i=0; i<salon.pets.length; i++){
+        var selected = salon.pets[i];
+        if(selected.id===petId){indexDelete=i;}
+    }
+
+    salon.pets.splice(indexDelete,1);
+    tr.remove();
+}
