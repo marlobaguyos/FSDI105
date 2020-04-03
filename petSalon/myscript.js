@@ -110,11 +110,11 @@ function display(aPet){
     var row = `<tr id='${aPet.id}'>
                     <td> ${aPet.name}</td>
                     <td> ${aPet.age}</td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td> ${aPet.breed}</td>
+                    <td> ${aPet.gender}</td>
+                    <td> ${aPet.service}</td>
+                    <td> ${aPet.owner}</td>
+                    <td> ${aPet.ownerContact}</td>
                     <td><button onclick='deletePet("${aPet.id}")'>Delete</button></td>
                 </tr>`;
     tbody.innerHTML+=row;
@@ -135,7 +135,7 @@ function deletePet(petId) {
         if(selected.id===petId){indexDelete=i;}
     }
 
-    
+
     salon.pets.splice(indexDelete,1);
     tr.remove();
 }
