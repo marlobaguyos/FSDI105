@@ -135,6 +135,7 @@ function deletePet(petId) {
         if(selected.id===petId){indexDelete=i;}
     }
 
+    
     salon.pets.splice(indexDelete,1);
     tr.remove();
 }
