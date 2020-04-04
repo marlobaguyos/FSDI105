@@ -7,7 +7,13 @@
 
 //jquery
 
-var x = $('p');
-console.log(x);
+// var x = $('p');
+// console.log(x);
 
-$('#logo').hide();
+// $('#logo').hide();
+
+$(function(){
+    'use strict';
+    
+
+});
