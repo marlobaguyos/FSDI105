@@ -14,6 +14,12 @@
 
 $(function(){
     'use strict';
-    
 
+    // $('.enlace').hide();
+
+    // $('main article:last').hide();
+
+    //$('main article:last p:fist').remove();
+
+    $('main article:first h2').html("<h1>Helfasdfalo<h1>");
 });
