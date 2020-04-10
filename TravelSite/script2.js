@@ -1,5 +1,12 @@
-//$ = jquery
+$(function(){
+    'use strict';
+    
+    // $('.enlace').hide();
 
-// JS
+    // $('main article:last').hide();
 
-var x = document.getElementsByTagName('p');
+    // $('main article:last p:first').remove();
+
+    $('main article:first h2').text("Hello");
+
+})
