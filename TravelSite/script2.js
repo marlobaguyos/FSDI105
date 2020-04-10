@@ -16,4 +16,12 @@ $(function(){
         $(this).attr('src', 'img/imagen_2.jpg');
     });
 
+    var copy = $('main article:last').clone();
+
+    // $('main').append(copy);
+
+    $(copy).appendTo('main');
+    // $('main').prepend(copy);
+
+
 })
