@@ -19,9 +19,19 @@ $(function(){
     var copy = $('main article:last').clone();
 
     // $('main').append(copy);
+    // $(copy).appendTo('main');
 
-    $(copy).appendTo('main');
     // $('main').prepend(copy);
+    // $(copy).prependTo('main');
 
+    $('div.logo img').on('mouseleave', function(){
+        //body of the function
+        console.log('mouse leave');
+    });
+
+    $('div.logo img').on('mouseenter',function(){
+        // $(this).remove();
+        console.log('mouse enter ')
+    })
 
 })
