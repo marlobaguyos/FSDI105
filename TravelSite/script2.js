@@ -55,14 +55,26 @@
 
 // });
 
+// $(function(){
+//     'use strict';
+//     $('.logo img').click(function(){
+//         $('main article:first').slideUp(1000);
+//     });
+
+//     $('aside').click(function(){
+//         $('main article:first').slideDown(1000);
+//     });
+
+// });
+
 $(function(){
     'use strict';
-    $('.logo img').click(function(){
-        $('main article:first').slideUp(1000);
-    });
+    
+    $('main article').addClass('activo');
 
-    $('aside').click(function(){
-        $('main article:first').slideDown(1000);
-    });
+    $('#navegacion ul li a').on('click', function(event){
+        event.preventDefault();
+        $(this).addClass('activo');
+    })
 
 });
