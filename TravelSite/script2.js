@@ -121,5 +121,5 @@ $(function(){
         console.log(status);
     }
 
-    //$('aside.sidebar').load();
+    $('aside.sidebar').load('page2.html');
 });
