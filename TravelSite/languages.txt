@@ -1,0 +1,6 @@
+Python
+JavaScript
+JQ
+Node JS
+C
+C#
