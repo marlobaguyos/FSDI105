@@ -4,8 +4,8 @@ const salon = {
     name:"The Fashion Pet",
     phone:"3255-78493",
     address:{
-        street:"Av. Insurgentes",
-        number:"456"
+        street:"Nowhere Drive",
+        number:"999"
     },
     workingHours:{
         days:"Mon-Fri",
@@ -142,3 +142,14 @@ function deletePet(petId) {
     tr.remove();
 }
 
+function Search() {
+  var ss = document.getElementById('petSearch').value;
+  var searchString = ss.toLowerCase();
+  for(var j=0; j<salon.pets.length;j++){
+    var searchPet = salon.pets[j];
+    if (searchString == searchPet.name.toLowerCase() || searchString == searchPet.id.toLowerCase() ){
+      document.getElementById('pet' + j).setAttribute('class', 'selected');
+    }
+  }
+
+}

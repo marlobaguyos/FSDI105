@@ -45,8 +45,12 @@ main{
 }
 
 .register {
-  margin: 1rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
+}
+
+.selected {
+  background-color: tomato;
 }
 
