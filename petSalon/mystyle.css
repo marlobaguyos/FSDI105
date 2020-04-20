@@ -44,3 +44,9 @@ main{
   text-align: center;
 }
 
+.register {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
