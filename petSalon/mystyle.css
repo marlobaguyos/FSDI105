@@ -8,7 +8,7 @@ header {
   color: white;
   display: flex;
   justify-content: space-between;
-  height: 10vh;
+  height: 7.3vh;
 }
 
 nav{
@@ -27,7 +27,20 @@ nav a:hover{
 }
 
 .img-logo{
-  width: 40%;
+  width: 30%;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+main{
+  height: 90vh;
+}
+
+.info {
+  background-color: black;
+  color: white;
+  font-size: .5rem;
+  text-align: center;
+}
+

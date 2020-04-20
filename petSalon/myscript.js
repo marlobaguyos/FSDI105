@@ -19,6 +19,9 @@ const salon = {
 
 let {name,phone,address:{street,number},workingHours:{days,open,close}} = salon;
 
+document.querySelector('.info').innerHTML=`Contact US ${phone}, ${street}, ${number} <br> It's open from ${open} to ${close}`;
+
+
 //object constructor
 var c = 0;
 class Pet{
