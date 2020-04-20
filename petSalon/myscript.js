@@ -19,9 +19,7 @@ const salon = {
 
 let {name,phone,address:{street,number},workingHours:{days,open,close}} = salon;
 
-document.querySelector('.info').innerHTML=``;
-// document.querySelector('.info').innerHTML=`Contact us ${salon.phone}, ${salon.street} ${salon.number} <br> It's open from ${salon.address.open} to ${salon.address.close}`;
-
+document.querySelector('.info').innerHTML=`Contact us ${phone}, ${street} ${number} <br> It's open from ${open} to ${close}`;
 
 //object constructor
 var c = 0;
