@@ -86,11 +86,11 @@ salon.pets.push(pet3);
 
 var textname = document.getElementById('txtName');
 var textage = document.getElementById('txtAge');
-var textgender = document.getElementById('txtgender');
-var textbreed = document.getElementById('txtbreed');
-var textservice = document.getElementById('txtservice');
+var textgender = document.getElementById('txtGender');
+var textbreed = document.getElementById('txtBreed');
+var textservice = document.getElementById('txtService');
 var textowner = document.getElementById('txtOname');
-var textcontact = document.getElementById('txtcontact')
+var textcontact = document.getElementById('txtContact')
 
 function register() {
     // console.log(textname.value);
@@ -129,14 +129,33 @@ function display(aPet) {
                     <td> ${aPet.service}</td>
                     <td> ${aPet.owner}</td>
                     <td> ${aPet.ownerContact}</td>
-                    <td><button onclick='deletePet("${aPet.id}")'>Delete</button></td>
+                    <td><i class="fa fa-trash-o" aria-hidden="true" onclick='deletePet("${aPet.id}")'></i>
+                    
+                    </td>
                 </tr>`;
     tbody.innerHTML += row;
 }
+{/* <button onclick='deletePet("${aPet.id}")'>Delete</button> */}
 
 display(pet1);
 display(pet2);
 display(pet3);
+
+function displayp(aPet) {
+    var tbody = document.getElementById('sPet');
+
+    var row = `<tr id='${aPet.id}'>
+                    <td> ${aPet.name}</td>
+                    <td> ${aPet.age}</td>
+                    <td> ${aPet.breed}</td>
+                    <td> ${aPet.gender}</td>
+                    <td> ${aPet.service}</td>
+                    <td> ${aPet.owner}</td>
+                    <td> ${aPet.ownerContact}</td>
+                    <td><button onclick='deletePet("${aPet.id}")'>Delete</button></td>
+                </tr>`;
+    tbody.innerHTML += row;
+}
 
 function deletePet(petId) {
     var tr = document.getElementById(petId);
@@ -162,21 +181,12 @@ function Search() {
     for (var j = 0; j < salon.pets.length; j++) {
         var searchPet = salon.pets[j];
         if (searchString == searchPet.name.toLowerCase() || searchString == searchPet.id.toLowerCase()) {
-            // document.getElementById('pet' + j).setAttribute('class', 'selected');
-            var sbody = document.getElementById('searchPet');
-
-                var row = `<tr id='${aPet.id}'>
-                                <td> ${aPet.name}</td>
-                                <td> ${aPet.age}</td>
-                                <td> ${aPet.breed}</td>
-                                <td> ${aPet.gender}</td>
-                                <td> ${aPet.service}</td>
-                                <td> ${aPet.owner}</td>
-                                <td> ${aPet.ownerContact}</td>
-                                <td><button onclick='deletePet("${aPet.id}")'>Delete</button></td>
-                            </tr>`;
-                sbody.innerHTML += row;
+            displayp(searchPet);
+            
+        }else{
+            document.getElementById('pangit').innerHTML = "No Match";
         }
+            
     }
 
 }

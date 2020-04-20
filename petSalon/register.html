@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Pet Salon Register</title>
 </head>
 
@@ -22,7 +23,7 @@
 
   <main class="register">
     <div class="input-pet">
-      <form action="#">
+      <!-- <form action="#" >
         <p>
           <label for="name">Name:</label>
           <input id="txtName" type="text">
@@ -64,6 +65,70 @@
         </p>
 
         <input type="button" value="Register" onclick="register();">
+      </form> -->
+
+      <form action="#">
+        <div class="form-group row input-pet">
+          <label for="name" class="col-4 col-form-label">Name</label> 
+          <div class="col-8">
+            <input id="txtName" name="txtName" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="age" class="col-4 col-form-label">Age</label> 
+          <div class="col-8">
+            <input id="txtAge" name="age" type="number" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-4 col-form-label">Gender</label> 
+          <div class="col-8">
+            <input id="txtGender" name="txtGender" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="breed" class="col-4 col-form-label">Breed</label> 
+          <div class="col-8">
+            <input id="txtBreed" name="txtBreed" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtService" class="col-4 col-form-label">Service</label> 
+          <div class="col-8">
+            <select id="txtService" name="service" aria-describedby="txtServiceHelpBlock" class="custom-select">
+              <option value="" disabled selected>-----Select a Service-----</option>
+              <option value="haircut">Haircut</option>
+              <option value="nailcut">Nailcut</option>
+              <option value="sleep">Putdown</option>
+              <option value="shower">Shower</option>
+            </select> 
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtOname" class="col-4 col-form-label">Owner's Name</label> 
+          <div class="col-8">
+            <input id="txtOname" name="txtOname" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtContact" class="col-4 col-form-label">Contact</label> 
+          <div class="col-8">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-address-card"></i>
+                </div>
+              </div> 
+              <input id="txtContact" name="txtContact" type="text" class="form-control">
+            </div>
+          </div>
+        </div> 
+        <div class="form-group row">
+          <div class="offset-4 col-8">
+            <!-- <input name="register"  class="btn btn-primary" type="button" value="Register" onclick="register();" > -->
+            <input type="button" value="Register" onclick="register();" class="btn btn-primary">
+          </div>
+        </div>
       </form>
     </div>
 
@@ -72,8 +137,18 @@
         <input type="search" name="search" id="petSearch">
         <button onclick="Search();">Search</button>
       </div>
-      <table>
-        <thead>
+      <div>
+      <table class="table table-striped table-dark">
+        <p id="pogi">Search Result</p>
+        <span id="pangit"></span>
+        <tbody id="sPet">
+          
+        </tbody>
+      </table>
+      </div>
+      <hr>
+      <table class="table">
+        <thead class="thead-dark">
           <th>Name</th>
           <th>Age</th>
           <th>Gender</th>
@@ -86,10 +161,6 @@
         <tbody id="rowPet">
 
         </tbody>
-
-        <sbody id="searchPet">
-
-        </sbody>
       </table>
     </div>
   </main>
